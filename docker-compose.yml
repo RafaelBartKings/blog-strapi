@@ -1,0 +1,18 @@
+version: "3.1"
+
+services:
+  blog_strap_api:
+    container_name: blog_strap_api
+    hostname: blog_strap_api
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: rafis1810
+      POSTGRES_DB: blog-strapi
+      PGDATA: /var/lib/postgresql/datapgdata
+    volumes:
+      - ~/.programacao/postgressData/blog_strap_api:/var/lib/postgressql/data/pgdata
+    ports:
+      - 5433:5433
+      # - 27018:3306
+
